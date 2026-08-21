@@ -1,0 +1,11 @@
+{
+  "name": "cryptoworld-3d",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline-first interactive 3D cryptography introduction",
+  "scripts": {
+    "test": "node tests/ciphers.test.js",
+    "check": "node --check js/i18n.js && node --check js/ciphers.js && node --check js/audio.js && node --check js/controls.js && node --check js/text3d.js && node --check js/world.js && node --check js/act/caesar.js && node --check js/act/railfence.js && node --check js/act/enigma.js && node --check js/act/aes.js && node --check js/act/rsha.js && node --check js/act/quantum.js && node --check js/main.js"
+  },
+  "engines": { "node": ">=18" }
+}

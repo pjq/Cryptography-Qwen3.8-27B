@@ -1,0 +1,8 @@
+/* Lightweight orbit/flight controls: pointer drag, wheel, touch pinch. */
+(function(){
+  function Controls(camera,dom){this.camera=camera;this.dom=dom;this.target=new THREE.Vector3();this.yaw=.65;this.pitch=.62;this.distance=55;this.drag=false;this.last=null;this.pinch=0;this.bind();this.update();}
+  Controls.prototype.bind=function(){var self=this,d=this.dom;d.addEventListener('pointerdown',function(e){self.drag=true;self.last={x:e.clientX,y:e.clientY};d.setPointerCapture&&d.setPointerCapture(e.pointerId);AudioFX.unlock();});d.addEventListener('pointermove',function(e){if(!self.drag)return;var dx=e.clientX-self.last.x,dy=e.clientY-self.last.y;self.last={x:e.clientX,y:e.clientY};self.yaw-=dx*.006;self.pitch=Math.max(.2,Math.min(1.35,self.pitch+dy*.005));self.update();});d.addEventListener('pointerup',function(){self.drag=false;});d.addEventListener('pointercancel',function(){self.drag=false;});d.addEventListener('wheel',function(e){self.distance=Math.max(18,Math.min(110,self.distance+e.deltaY*.04));self.update();},{passive:true});};
+  Controls.prototype.update=function(){var x=Math.cos(this.yaw)*Math.cos(this.pitch)*this.distance,y=Math.sin(this.pitch)*this.distance,z=Math.sin(this.yaw)*Math.cos(this.pitch)*this.distance;this.camera.position.set(this.target.x+x,this.target.y+y,this.target.z+z);this.camera.lookAt(this.target);};
+  Controls.prototype.focus=function(v,instant){this.target.copy(v);if(instant)this.update();};
+  window.WorldControls=Controls;
+})();
