@@ -65,7 +65,7 @@ The VPS uses nginx with the public root `/mnt/backup_ssf/chitchat/`. Deploy the 
 
 ## Redesign plan
 
-The approved direction is a professional, non-3D three-day training application. The detailed product, course, interaction, architecture, migration, and acceptance plan is in [`docs/course-redesign-plan.md`](docs/course-redesign-plan.md).
+The approved direction is a professional, non-3D three-day training application. The detailed product, course, interaction, architecture, migration, and acceptance plan is in [`docs/course-redesign-plan.md`](docs/course-redesign-plan.md). The implementation specification for replacing all checklist placeholders with real input/output practical laboratories is in [`docs/real-labs-build-plan.md`](docs/real-labs-build-plan.md).
 
 ## License
 
