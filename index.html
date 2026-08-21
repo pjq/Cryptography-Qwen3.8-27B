@@ -2,70 +2,29 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-<meta name="theme-color" content="#04060e">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="description" content="An interactive 3D world teaching cryptography: classical ciphers, Enigma, AES, RSA, Diffie-Hellman, and post-quantum cryptography.">
-<title>CryptoWorld 3D · 密码学世界3D</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10263d">
+<meta name="description" content="A professional three-day interactive cryptography training course.">
+<title>CryptoWorld · Cryptography Training</title>
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icons/icon-192.png">
-<link rel="apple-touch-icon" href="icons/icon-192.png">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/ui-editorial.css">
+<link rel="stylesheet" href="css/course.css">
 </head>
 <body>
-<canvas id="world-canvas" aria-label="Interactive cryptography world"></canvas>
-<div id="loader">
-  <div class="loader-lock"><div class="loader-shackle"></div><div class="loader-body"><span class="led" id="loader-led"></span></div></div>
-  <div class="loader-bar"><div id="loader-fill"></div></div>
-  <div id="loader-text">Unlocking the world…</div>
-</div>
-
-<div id="ui">
-  <header id="hud-top">
-    <button id="btn-lang" class="chip">中文</button>
-    <button id="btn-menu" class="chip">☰ Map</button>
-    <div id="hud-title">CryptoWorld 3D</div>
-    <button id="btn-sound" class="chip">♪</button>
+<div id="app" class="app-shell">
+  <header class="topbar">
+    <a class="brand" href="#/" aria-label="CryptoWorld course home"><span class="brand-mark">C</span><span>CRYPTOWORLD <small>TRAINING EDITION</small></span></a>
+    <div class="topbar-meta"><span id="course-progress-label">0% complete</span><button id="btn-language" class="text-button">中文</button></div>
   </header>
-
-  <div id="world-menu" class="hidden">
-    <div id="world-menu-list"></div>
+  <div class="mobile-toolbar"><button id="btn-outline" class="outline-toggle">Course outline</button><span id="mobile-lesson-label"></span></div>
+  <div class="course-layout">
+    <aside id="outline" class="outline" aria-label="Course outline"></aside>
+    <main id="workspace" class="workspace" tabindex="-1"></main>
+    <aside id="learning-sidebar" class="learning-sidebar" aria-label="Lesson information"></aside>
   </div>
-
-  <div id="island-panel" class="hidden">
-    <div class="panel-inner">
-      <h1 id="island-name"></h1>
-      <p id="island-sub" class="panel-sub"></p>
-      <div id="island-body"></div>
-      <div id="island-actions">
-        <button id="btn-prev" class="btn">←</button>
-        <button id="btn-start" class="btn btn-primary"></button>
-        <button id="btn-next" class="btn">→</button>
-      </div>
-    </div>
-  </div>
-
-  <div id="hint-bar" class="hidden"></div>
-  <div id="toast" class="hidden"></div>
 </div>
-
-<script src="lib/three.min.js"></script>
-<script src="js/i18n.js"></script>
 <script src="js/curriculum.js"></script>
 <script src="js/ciphers.js"></script>
-<script src="js/audio.js"></script>
-<script src="js/controls.js"></script>
-<script src="js/text3d.js"></script>
-<script src="js/world.js"></script>
-<script src="js/act/caesar.js"></script>
-<script src="js/act/railfence.js"></script>
-<script src="js/act/enigma.js"></script>
-<script src="js/act/aes.js"></script>
-<script src="js/act/rsha.js"></script>
-<script src="js/act/quantum.js"></script>
-<script src="js/act/curriculum.js"></script>
-<script src="js/main.js"></script>
+<script src="js/course-app.js"></script>
 </body>
 </html>

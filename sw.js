@@ -1,9 +1,6 @@
-const CACHE = 'cryptoworld-v4-three-day-course';
-const ASSETS = ['.', 'index.html', 'manifest.json', 'css/style.css', 'css/ui-editorial.css',
-  'js/i18n.js', 'js/curriculum.js', 'js/ciphers.js', 'js/audio.js', 'js/controls.js',
-  'js/text3d.js', 'js/world.js', 'js/act/caesar.js', 'js/act/railfence.js',
-  'js/act/enigma.js', 'js/act/aes.js', 'js/act/rsha.js', 'js/act/quantum.js', 'js/act/curriculum.js',
-  'js/main.js', 'lib/three.min.js',
+const CACHE = 'cryptoworld-v5-course-shell';
+const ASSETS = ['.', 'index.html', 'manifest.json', 'css/course.css',
+  'js/curriculum.js', 'js/ciphers.js', 'js/course-app.js',
   'icons/icon-192.png', 'icons/icon-512.png'];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));
