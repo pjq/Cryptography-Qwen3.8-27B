@@ -45,6 +45,7 @@ A learner must always know:
 - Remove floating islands, orbit controls, star fields, rings, procedural monoliths, and random glyphs.
 - Do not replace them with pseudo-3D gradients or generic dashboard decoration.
 - Use SVG, Canvas, and semantic HTML only where they clarify an idea.
+- Use a restrained Material-inspired UI language: light surfaces, Google-blue primary actions, rounded cards, clear focus states, and no gradients or glow. This is an interaction and layout reference, not a copy of Google branding.
 
 ### 2.3 Explain failure modes
 

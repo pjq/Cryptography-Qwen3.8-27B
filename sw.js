@@ -1,5 +1,5 @@
-const CACHE = 'cryptoworld-v5-course-shell';
-const ASSETS = ['.', 'index.html', 'manifest.json', 'css/course.css',
+const CACHE = 'cryptoworld-v6-material-theme';
+const ASSETS = ['.', 'index.html', 'manifest.json', 'css/course.css', 'css/google-ui.css',
   'js/curriculum.js', 'js/ciphers.js', 'js/course-app.js',
   'icons/icon-192.png', 'icons/icon-512.png'];
 self.addEventListener('install', (e) => {
