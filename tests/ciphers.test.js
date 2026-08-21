@@ -3,6 +3,12 @@
 global.window = global;
 require('../js/ciphers.js');
 const C = global.Ciphers;
+global.window.CURRICULUM = undefined;
+require('../js/curriculum.js');
+if (global.CURRICULUM.all.length < 30) throw new Error('curriculum coverage unexpectedly small');
+for (const required of ['frequency','pigpen','des','ecb','cbc','ctr','gcm','hmac','oaep','signature','dh','mitm','pfs','ecc','hybrid','shor','grover','standards','migration']) {
+  if (!global.CURRICULUM.byId[required]) throw new Error('missing curriculum lesson: '+required);
+}
 function eq(actual, expected, label) {
   if (JSON.stringify(actual) !== JSON.stringify(expected)) throw new Error(label+'\nactual: '+JSON.stringify(actual)+'\nexpected: '+JSON.stringify(expected));
 }

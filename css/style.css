@@ -30,6 +30,13 @@ canvas { display: block; position: fixed; inset: 0; touch-action: none; }
 #world-menu h2 { font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: #7f96cc; margin-bottom: 14px; }
 .wm-row { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; background: rgba(18,28,58,.6); border: 1px solid transparent; border-radius: 12px; padding: 11px 12px; margin-bottom: 8px; color: #dfe8ff; cursor: pointer; font-family: inherit; }
 .wm-row:active { border-color: rgba(120,160,255,.5); background: rgba(30,46,92,.8); }
+.chapter-heading { display:flex; align-items:center; gap:8px; margin:16px 0 8px; color:#dfe8ff; font-size:13px; font-weight:800; letter-spacing:.03em; }
+.chapter-heading:first-of-type { margin-top:0; }
+.chapter-heading small { margin-left:auto; color:#6f84b8; font-weight:500; }
+.lesson-row { padding:9px 10px 9px 12px; margin-bottom:6px; }
+.lesson-row .wm-name { font-size:13px; }
+.lesson-row .wm-desc { font-size:11px; }
+.lesson-row .wm-star { color:#8ef7a5; }
 .wm-dot { width: 12px; height: 12px; border-radius: 50%; flex: none; }
 .wm-name { flex: 1; font-size: 15px; font-weight: 700; }
 .wm-desc { font-size: 11.5px; color: #8fa3cf; max-width: 52%; }

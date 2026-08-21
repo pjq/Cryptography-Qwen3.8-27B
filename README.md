@@ -16,8 +16,9 @@ An offline-first, interactive introduction to cryptography, presented as a small
 ## Features
 
 - Procedural 3D world with seven islands and animated cipher monoliths.
+- A complete 35-lesson curriculum mapped to the four source posts, including frequency analysis, Pigpen, DES/Feistel, all AES modes, HMAC, OAEP, signatures, DH/MITM/PFS, ECC, hybrid encryption, Shor, Grover and PQC migration.
 - Orbit, zoom, map navigation, responsive layout, PWA installability, and offline cache.
-- Caesar shift wheel, Rail Fence transposition, Enigma-style rotor exercise, AES S-box/block lab, educational RSA key generation, and Grover/Shor migration visualizer.
+- Specialized labs for Caesar, Rail Fence, Enigma-style rotors, AES/S-box, RSA and quantum search, plus a generic interactive lesson renderer for every remaining curriculum topic.
 - AES implementation validated against FIPS-197 Appendix B (`3243f6a8885a308d313198a2e0370734` → `3925841d02dc09fbdc118597196a0b32`).
 - Pure-JS unit tests for Caesar, Atbash, Rail Fence, Playfair, AES, RSA, DH, and modular inverse.
 
@@ -40,6 +41,7 @@ python3 -m http.server 8200
 index.html              runtime shell and script loading order
 css/style.css           responsive HUD, panels, exercises
 js/i18n.js              locale state and strings
+js/curriculum.js        35-lesson source-aligned curriculum
 js/ciphers.js           pure educational algorithms + self-validation
 js/world.js             procedural Three.js scene
 js/controls.js          pointer orbit controls
@@ -47,7 +49,7 @@ js/act/                 station exercises
 lib/three.min.js        vendored Three.js runtime
 sw.js                   offline cache
 manifest.json           PWA metadata
-tests/                  Node regression tests
+tests/                  Node regression and curriculum coverage tests
 docs/                   architecture, pedagogy, operations
 ```
 

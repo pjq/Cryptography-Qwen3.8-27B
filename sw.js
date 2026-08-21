@@ -1,8 +1,8 @@
-const CACHE = 'cryptoworld-v1';
+const CACHE = 'cryptoworld-v2-curriculum';
 const ASSETS = ['.', 'index.html', 'manifest.json', 'css/style.css',
-  'js/i18n.js', 'js/ciphers.js', 'js/audio.js', 'js/controls.js',
+  'js/i18n.js', 'js/curriculum.js', 'js/ciphers.js', 'js/audio.js', 'js/controls.js',
   'js/text3d.js', 'js/world.js', 'js/act/caesar.js', 'js/act/railfence.js',
-  'js/act/enigma.js', 'js/act/aes.js', 'js/act/rsha.js', 'js/act/quantum.js',
+  'js/act/enigma.js', 'js/act/aes.js', 'js/act/rsha.js', 'js/act/quantum.js', 'js/act/curriculum.js',
   'js/main.js', 'lib/three.min.js',
   'icons/icon-192.png', 'icons/icon-512.png'];
 self.addEventListener('install', (e) => {

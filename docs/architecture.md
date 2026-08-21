@@ -7,17 +7,18 @@ The application is intentionally a static site. `index.html` loads vendored Thre
 ### Layers
 
 1. **Presentation** — `index.html` and `css/style.css`; HUD and exercise panels are DOM overlays above the WebGL canvas.
-2. **World** — `js/world.js` builds islands, bridges, labels, lighting, particles, and station metadata procedurally.
-3. **Input** — `js/controls.js` handles pointer orbit/zoom. Map and station actions remain normal DOM controls.
-4. **Learning activities** — each `js/act/*.js` owns one station's markup and event wiring, returning a cleanup function boundary.
-5. **Crypto math** — `js/ciphers.js` contains pure functions and regression validation. It has no DOM dependency and can be loaded in Node tests.
-6. **Persistence/i18n** — `js/main.js` persists visited stations and `js/i18n.js` persists locale through `localStorage`.
+2. **Curriculum** — `js/curriculum.js` contains the source-aligned 35-lesson model across the four blog chapters, with bilingual titles, explanations, source links and activity kinds.
+3. **World** — `js/world.js` builds islands, bridges, labels, lighting, particles, and station metadata procedurally.
+4. **Input** — `js/controls.js` handles pointer orbit/zoom. Map and lesson actions remain normal DOM controls.
+5. **Learning activities** — each `js/act/*.js` owns one specialized station or the generic curriculum lesson renderer, returning a cleanup function boundary.
+6. **Crypto math** — `js/ciphers.js` contains pure functions and regression validation. It has no DOM dependency and can be loaded in Node tests.
+7. **Persistence/i18n** — `js/main.js` persists visited lessons and `js/i18n.js` persists locale through `localStorage`.
 
 ## State model
 
 - `World.stations`: immutable-ish station descriptors with id, position, color, and group.
-- `visited`: a local-only set of explored station ids.
-- `current`: active station id; the lesson stage is created only when the learner presses Start.
+- `visited`: a local-only set of explored lesson ids.
+- `currentLesson`: active curriculum lesson; the lesson stage is created only when the learner presses Start.
 - `Ciphers`: deterministic functions; random educational RSA key generation is isolated to `rsaKeyPair`.
 
 ## Cryptographic correctness
