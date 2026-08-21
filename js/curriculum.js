@@ -46,5 +46,11 @@
     ]}
   ];
   var by={};C.forEach(function(ch){ch.lessons.forEach(function(x){by[x[0]]={id:x[0],title:x[1],zh:x[2],body:x[3],kind:x[4],chapter:ch.id,chapterTitle:ch.title,color:ch.color,source:ch.source};});});
-  window.CURRICULUM={chapters:C,byId:by,all:C.reduce(function(a,c){return a.concat(c.lessons.map(function(x){return by[x[0]];}));},[])};
+  var days=[
+    {id:'day1',number:'DAY 1',title:'Introduction & Classical Cryptography · 密码学导论与古典密码学',color:'#ffca5c',chapters:['classical']},
+    {id:'day2',number:'DAY 2',title:'Symmetric Cryptography · 对称密码学',color:'#8ef7a5',chapters:['symmetric']},
+    {id:'day3',number:'DAY 3',title:'Asymmetric Cryptography · 非对称密码学',color:'#b78cff',chapters:['asymmetric','quantum'],note:'Post-quantum cryptography is the closing outlook for Day 3.'}
+  ];
+  days.forEach(function(day){day.lessons=[];day.chapters.forEach(function(id){var ch=C.filter(function(x){return x.id===id;})[0];if(ch)ch.lessons.forEach(function(x){var l=by[x[0]];l.day=day.id;l.dayTitle=day.title;day.lessons.push(l);});});});
+  window.CURRICULUM={chapters:C,days:days,byId:by,all:days.reduce(function(a,d){return a.concat(d.lessons);},[])};
 })();

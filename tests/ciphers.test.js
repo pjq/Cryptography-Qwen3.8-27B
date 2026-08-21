@@ -6,6 +6,10 @@ const C = global.Ciphers;
 global.window.CURRICULUM = undefined;
 require('../js/curriculum.js');
 if (global.CURRICULUM.all.length < 30) throw new Error('curriculum coverage unexpectedly small');
+if (global.CURRICULUM.days.length !== 3) throw new Error('course must have exactly three training days');
+if (global.CURRICULUM.days[0].chapters.join() !== 'classical') throw new Error('Day 1 must be classical cryptography');
+if (global.CURRICULUM.days[1].chapters.join() !== 'symmetric') throw new Error('Day 2 must be symmetric cryptography');
+if (global.CURRICULUM.days[2].chapters.join() !== 'asymmetric,quantum') throw new Error('Day 3 must be asymmetric plus PQC outlook');
 for (const required of ['frequency','pigpen','des','ecb','cbc','ctr','gcm','hmac','oaep','signature','dh','mitm','pfs','ecc','hybrid','shor','grover','standards','migration']) {
   if (!global.CURRICULUM.byId[required]) throw new Error('missing curriculum lesson: '+required);
 }

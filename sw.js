@@ -1,4 +1,4 @@
-const CACHE = 'cryptoworld-v3-editorial';
+const CACHE = 'cryptoworld-v4-three-day-course';
 const ASSETS = ['.', 'index.html', 'manifest.json', 'css/style.css', 'css/ui-editorial.css',
   'js/i18n.js', 'js/curriculum.js', 'js/ciphers.js', 'js/audio.js', 'js/controls.js',
   'js/text3d.js', 'js/world.js', 'js/act/caesar.js', 'js/act/railfence.js',

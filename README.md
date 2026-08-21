@@ -1,6 +1,6 @@
 # CryptoWorld 3D · 密码学世界 3D
 
-An offline-first, interactive introduction to cryptography, presented as a small explorable Three.js world. The learning path follows Jianqing Peng's four-part cryptography series: classical ciphers → symmetric encryption → asymmetric cryptography → post-quantum cryptography.
+An offline-first, professional three-day cryptography training companion. The learning path follows Jianqing Peng's series while organizing it into the actual training structure: Day 1 introduction/classical cryptography, Day 2 symmetric cryptography, and Day 3 asymmetric cryptography with post-quantum cryptography as the closing outlook.
 
 **Live deployment:** `https://chitchat.pjq.me/download/cryptography/`  
 **Repository:** `git@github.com:pjq/Cryptography-Qwen3.8-27B.git`
@@ -16,7 +16,7 @@ An offline-first, interactive introduction to cryptography, presented as a small
 ## Features
 
 - Procedural 3D world with seven islands and animated cipher monoliths.
-- A complete 35-lesson curriculum mapped to the four source posts, including frequency analysis, Pigpen, DES/Feistel, all AES modes, HMAC, OAEP, signatures, DH/MITM/PFS, ECC, hybrid encryption, Shor, Grover and PQC migration.
+- A complete 35-lesson, three-day curriculum mapped to the source posts: Day 1 classical, Day 2 symmetric, Day 3 asymmetric plus post-quantum outlook. Topics include frequency analysis, Pigpen, DES/Feistel, all AES modes, HMAC, OAEP, signatures, DH/MITM/PFS, ECC, hybrid encryption, Shor, Grover and PQC migration.
 - Orbit, zoom, map navigation, responsive layout, PWA installability, and offline cache.
 - Specialized labs for Caesar, Rail Fence, Enigma-style rotors, AES/S-box, RSA and quantum search, plus a generic interactive lesson renderer for every remaining curriculum topic.
 - AES implementation validated against FIPS-197 Appendix B (`3243f6a8885a308d313198a2e0370734` → `3925841d02dc09fbdc118597196a0b32`).
