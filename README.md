@@ -63,6 +63,10 @@ The post-quantum island reflects the blog series' main distinction: Shor's algor
 
 The VPS uses nginx with the public root `/mnt/backup_ssf/chitchat/`. Deploy the static app as `download/cryptography/`. See [`docs/operations.md`](docs/operations.md) for the exact non-root deployment and verification flow.
 
+## Redesign plan
+
+The approved direction is a professional, non-3D three-day training application. The detailed product, course, interaction, architecture, migration, and acceptance plan is in [`docs/course-redesign-plan.md`](docs/course-redesign-plan.md).
+
 ## License
 
 MIT. Three.js remains under its own license; see the vendored library header.
