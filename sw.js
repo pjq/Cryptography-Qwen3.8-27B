@@ -1,6 +1,6 @@
-const CACHE = 'cryptoworld-v6-material-theme';
+const CACHE = 'cryptoworld-v7-detailed-content';
 const ASSETS = ['.', 'index.html', 'manifest.json', 'css/course.css', 'css/google-ui.css',
-  'js/curriculum.js', 'js/ciphers.js', 'js/course-app.js',
+  'js/curriculum.js', 'js/course-content.js', 'js/ciphers.js', 'js/course-app.js',
   'icons/icon-192.png', 'icons/icon-512.png'];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));

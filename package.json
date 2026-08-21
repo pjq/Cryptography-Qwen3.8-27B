@@ -5,7 +5,7 @@
   "description": "Offline-first three-day interactive cryptography training course",
   "scripts": {
     "test": "node tests/ciphers.test.js",
-    "check": "node --check js/curriculum.js && node --check js/ciphers.js && node --check js/course-app.js"
+    "check": "node --check js/curriculum.js && node --check js/course-content.js && node --check js/ciphers.js && node --check js/course-app.js"
   },
   "engines": { "node": ">=18" }
 }

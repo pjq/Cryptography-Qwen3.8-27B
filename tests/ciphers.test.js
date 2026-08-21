@@ -10,6 +10,12 @@ if (global.CURRICULUM.days.length !== 3) throw new Error('course must have exact
 if (global.CURRICULUM.days[0].chapters.join() !== 'classical') throw new Error('Day 1 must be classical cryptography');
 if (global.CURRICULUM.days[1].chapters.join() !== 'symmetric') throw new Error('Day 2 must be symmetric cryptography');
 if (global.CURRICULUM.days[2].chapters.join() !== 'asymmetric,quantum') throw new Error('Day 3 must be asymmetric plus PQC outlook');
+const content = require('../js/course-content.js');
+if (!global.COURSE_CONTENT || ['foundations','caesar','frequency','rail'].some(id => !global.COURSE_CONTENT[id])) throw new Error('Day 1 authored content is incomplete');
+['foundations','caesar','frequency','rail'].forEach(id => {
+  const lesson = global.COURSE_CONTENT[id];
+  if (!lesson.durationMinutes || lesson.objectives.length < 2 || lesson.sections.length < 2 || !lesson.check) throw new Error('Detailed lesson contract failed: ' + id);
+});
 for (const required of ['frequency','pigpen','des','ecb','cbc','ctr','gcm','hmac','oaep','signature','dh','mitm','pfs','ecc','hybrid','shor','grover','standards','migration']) {
   if (!global.CURRICULUM.byId[required]) throw new Error('missing curriculum lesson: '+required);
 }
