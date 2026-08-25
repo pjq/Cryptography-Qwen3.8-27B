@@ -4,3 +4,7 @@
 .mitm-party strong{display:block;margin-bottom:6px}
 .mitm-party.mallory{background:#fdeceb;border-color:#e8b4b0}
 .mitm-party span{font-size:13px;color:var(--muted)}
+.pf-square-wrap{display:flex;justify-content:center;margin:16px 0}
+.pf-square{border-collapse:collapse}
+.pf-square td{width:52px;height:52px;border:1px solid var(--line);text-align:center;font-size:20px;background:#fffdf8;transition:background .4s}
+.pf-square td.hit{background:#137333;color:#fff;font-weight:700}
