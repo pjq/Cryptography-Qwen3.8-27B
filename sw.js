@@ -1,4 +1,4 @@
-const CACHE = 'cryptoworld-v34-gcm-auth-lab';
+const CACHE = 'cryptoworld-v35-mitm-lab';
 const ASSETS = ['.', 'index.html', 'manifest.json', 'css/course.css', 'css/google-ui.css',
   'js/curriculum.js', 'js/course-content.js', 'js/ciphers.js', 'js/course-app.js',
   'icons/icon-192.png', 'icons/icon-512.png'];
